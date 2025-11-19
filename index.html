@@ -9,16 +9,36 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-  Publish your podcasts everywhere.
-
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-  Apple Podcasts, Google Podcasts, Pocket Casts and more!
-
-  Request access
-
-  <div class="attribution">
+    <main class="pod">
+      <img class="pod__logo" src="assets/desktop/logo.svg" alt="Pod logo"/>
+      <section class="pod__content">
+        <h1 class="pod__title">Publish your podcasts <span class="pod__title--highlighted">everywhere.</span></h1>
+        <p class="pod__text">Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+        <div class="pod__actions">
+          <ul class="pod__platforms">
+            <li class="pod__platform-item">
+              <img class="pod__platform-logo pod__platform-logo--spotify" src="assets/desktop/spotify.svg"/>
+            </li>
+            <li class="pod__platform-item">
+              <img class="pod__platform-logo pod__platform-logo--apple" src="assets/desktop/apple-podcast.svg">
+            </li>
+            <li class="pod__platform-item">
+              <img class="pod__platform-logo pod__platform-logo--google" src="assets/desktop/google-podcasts.svg"/>
+            </li>
+            <li class="pod__platform-item">
+              <img class="pod__platform-logo pod__platform-logo--pocket" src="assets/desktop/pocket-casts.svg">
+            </li>
+          </ul>
+          <form class="pod__form" novalidate>
+            <input class="pod__input" type="email" placeholder="Email address" required></input>
+            <button class="pod__button" type="submit">Request Access</button>
+          </form>
+        </div>
+      </section>
+      <img class="pod__dots" src="assets/desktop/bg-pattern-dots.svg" alt="background dots"/>
+    </main>
+    <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/arne-witteler">Arne Witteler</a>.
-  </div>
+    Coded by <a href="https://github.com/arne-witteler">Arne Witteler</a>.</div>
   </body>
 </html>

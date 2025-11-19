@@ -7,7 +7,136 @@
   font-family: var(--font-family);
 }
 
+body {
+  background-color: var(--color-blue-950);
+  margin: 0 auto;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-image: 
+    linear-gradient(
+      hsla(224, 35%, 11%, 0.9),
+      hsla(224, 35%, 11%, 0.9)
+    ),
+    url('../assets/mobile/image-host.jpg');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pod {
+  width: 100%;
+  max-width: 300px;
+  margin: 4rem auto;
+}
+
+.pod__logo {
+  margin-bottom: 56px;
+}
+
+.pod__title {
+  font-size: 32px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-light);
+  margin-bottom: 16px;
+  color: var(--color-green);
+}
+
+.pod__title--highlighted {
+  color: var(--color-white);
+}
+
+.pod__text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-blue-300);
+  font-weight: var(--font-weight-light);
+  margin-bottom: 40px;
+}
+
+.pod__platforms {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 303px;
+  width: 100%;
+  margin: 0 auto 40px;
+  gap: 0;
+}
+
+.pod__platform-item {
+  display: flex;
+  align-items: center;
+}
+
+.pod__platform-logo--spotify {
+  width: 55.94px;
+  height: 16.95px;
+}
+
+.pod__platform-logo--apple {
+  width: 45px;
+  height: 17px;
+}
+
+.pod__platform-logo--google {
+  width: 72.97px;
+  height: 10.67px;
+}
+
+.pod__platform-logo--pocket {
+  width: 75.88px;
+  height: 14.9px
+}
+
+.pod__platform-logo {
+  display: block;
+}
+
+.pod__input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-blue-900);
+  line-height: 200%;
+  color: var(--color-white);
+  height: 44px;
+}
+
+.pod__button {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-green);
+  color: var(--color-blue-950);
+  cursor: pointer;
+  height: 44px;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--color-green), white 50%);
+  }
+}
+
+.pod__dots {
+  display: none;
+}
+
 .attribution {
+  font-weight: var(--font-weight-light);
+  color: var(--color-blue-300);
   font-size: 11px;
   text-align: center;
   margin-top: 1rem;
@@ -15,4 +144,196 @@
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+
+  body {
+    background-image: none
+  }
+
+  main {
+    background-image: url('../assets/tablet/image-host.jpg');
+    background-repeat: no-repeat;
+    background-position: calc(100% + 50px) top;
+    height: 100%;
+    margin: 0;
+  }
+
+  .pod {
+    width: 100%;
+    max-width: none;
+    text-align: left;
+    margin: 0 0 0 44px;
+    position: relative;
+  }
+
+  .pod__logo {
+    margin: 104px 0 104px 0;
+  }
+
+  .pod__content {
+    max-width: 592px;
+    background-color: var(--color-blue-950);
+    padding-top: 68px;
+  }
+
+  .pod__title {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    padding-right: 50px;
+  }
+
+  .pod__text {
+    max-width: 440px;
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+
+  .pod__actions {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 440px;
+  }
+
+  .pod__form {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-blue-900);
+    border-radius: 30px;
+    overflow: hidden;
+    height: 52px;
+    width: 448px;
+    max-width: 440px;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .pod__input {
+    flex: 1;
+    height: 100%;
+    border-radius: 30px 0 0 30px;
+    margin: 0;                  
+    padding: 0 20px;
+  }
+
+  .pod__input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .pod__button {
+    height: 44px;
+    width: 172px;  
+    margin: 4px;
+    padding: 0 24px;
+    border-radius: 30px;
+    white-space: nowrap;
+  }
+
+  .pod__platforms {
+    justify-content: flex-start;
+    gap: 40px;
+    align-items: center;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .pod__platform-logo--spotify {
+    width: 95.9px;
+    height: 28.91px;
+  }
+
+  .pod__platform-logo--apple {
+    width: 78px;
+    height: 29px;
+  }
+
+  .pod__platform-logo--google {
+    width: 124.95px;
+    height: 17.47px;
+  }
+
+  .pod__platform-logo--pocket {
+    width: 128.8px;
+    height: 25.83px
+  }
+
+  .pod__dots {
+    display: block;
+    position: absolute;
+    right: -90px;
+    bottom: -13.5%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 1;
+  }
+
+  .attribution {
+    font-weight: var(--font-weight-light);
+    color: var(--color-blue-300);
+    font-size: 11px;
+    text-align: center;
+    margin-top: 0;
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    background-image: url('../assets/desktop/image-host.jpg');
+    background-repeat: no-repeat;
+    background-position: calc(100% + 100px) top;
+    height: 100%;
+    margin: 80px 0;
+  }
+
+  .pod {
+    width: 100%;
+    max-width: none;
+    text-align: left;
+    margin: 100px 0 0 44px;
+    position: relative;
+  }
+
+  .pod__logo {
+    margin: 0 0 80px 0;
+  }
+
+  .pod__content {
+    max-width: 736px;
+    background-color: var(--color-blue-950);
+    padding-top: 68px;
+  }
+
+  .pod__title {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    padding-right: 50px;
+  }
+
+  .pod__text {
+    max-width: 440px;
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+
+  .pod__actions {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 440px;
+  }
+
+  .pod__dots {
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: -17.5%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 1;
+  }
 }
