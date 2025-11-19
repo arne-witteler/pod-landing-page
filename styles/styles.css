@@ -59,6 +59,35 @@ body {
   margin-bottom: 40px;
 }
 
+.pod__form {
+  position: relative;
+}
+
+.pod__input--error {
+  outline: 2px solid var(--color-red);
+  outline-offset: 0;
+  border-radius: 30px;
+}
+
+.pod__error-message {
+  display: none;
+  font-size: 12px;
+  margin-top: 6px;
+  color: var(--color-red);
+  font-weight: var(--font-weight-bold);
+}
+
+.pod__error-message--visible {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 8px 5px;
+
+}
+
 .pod__platforms {
   list-style: none;
   display: flex;
@@ -202,12 +231,18 @@ body {
     align-items: center;
     background-color: var(--color-blue-900);
     border-radius: 30px;
-    overflow: hidden;
-    height: 52px;
+    overflow: visible;
+    height: auto;
     width: 448px;
     max-width: 440px;
     padding: 0;
     margin-bottom: 40px;
+  }
+
+  .pod__form--error {
+    outline: 2px solid var(--color-red);
+    outline-offset: 0;
+    border-radius: 30px;
   }
 
   .pod__input {
@@ -221,6 +256,10 @@ body {
   .pod__input:focus {
     outline: none;
     box-shadow: none;
+  }
+
+  .pod__error-message {
+    margin-left: 13px;
   }
 
   .pod__button {
@@ -237,7 +276,7 @@ body {
     gap: 40px;
     align-items: center;
     max-width: none;
-    margin: 0 auto;
+    margin: 2rem auto 0;
   }
 
   .pod__platform-logo--spotify {
@@ -264,7 +303,7 @@ body {
     display: block;
     position: absolute;
     right: -90px;
-    bottom: -13.5%;
+    bottom: -9.9%;
     transform: translateY(-50%);
     z-index: 10;
     opacity: 1;
