@@ -314,9 +314,8 @@ body {
     color: var(--color-blue-300);
     font-size: 11px;
     text-align: center;
-    margin-top: 0;
-    position: absolute;
-    bottom: 10px;
+    margin-top: 2rem;
+    bottom: 1px;
   }
 }
 
